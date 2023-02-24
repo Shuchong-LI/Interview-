@@ -4,6 +4,7 @@
 
 **I:**
 But as i know,I can also use gcc command to generate the excutable file instead of ld(GNU linker).
+通常情况下，gcc编译时同时也执行了链接器的功能。
 
 **Char GPT:**
 Yes, that's correct! In fact, when you use the gcc command to compile and link a C program, it actually uses the GNU linker (ld) under the hood.

@@ -16,6 +16,8 @@ Symbol resolution: The linker resolves any external symbols referenced by the ob
 
 Address binding: The linker assigns addresses to the symbols in the program, determining where each function or variable will be located in memory at runtime. It also resolves any relative addresses used in the program, ensuring that they point to the correct memory location.
 
+地址绑定：连接器为程序中的符号分配地址，符号包括函数名，变量名，常数等。为了让程序运行，CPU 需要知道每个符号所在的内存地址。链接器获取编译器生成的符号列表，并为每个符号分配一个内存中的特定地址，程序执行时它将位于该地址。此过程称为“地址绑定”。
+
 Code and data optimization: The linker can optimize the code and data in the program by removing unused functions and data, merging identical functions and data, and reordering code to improve performance.
 
 Library management: The linker can link in external libraries that contain pre-written code that the program can use. This can save time and effort in development by allowing programmers to use existing code rather than writing their own from scratch.
@@ -25,6 +27,23 @@ Platform-specific tasks: The linker may also perform platform-specific tasks, su
 In summary, the linker is a critical component in software development that combines object files into a single executable program or library, resolves external symbols, assigns memory addresses, optimizes code and data, links external libraries, and performs platform-specific tasks. Without the linker, it would be impossible to produce a working executable program from the source code.
 
 - Can you describe the process of booting a system and the steps that occur during startup?
+
+Certainly! The process of booting a computer system typically involves the following steps:
+
+**Power On**: When the computer is turned on, the power supply unit sends power to the various components in the system, including the CPU, memory, and other peripheral devices.
+
+**BIOS/UEFI**: The Basic Input/Output System (BIOS) or Unified Extensible Firmware Interface (UEFI) is a program that is stored in non-volatile memory on the motherboard. It runs a series of self-tests to ensure that all the hardware components are functioning properly.
+
+**Bootloader**: Once the BIOS/UEFI has finished its checks, it searches for a bootloader program on the hard drive. The bootloader is responsible for loading the operating system into memory.
+
+**Kernel Initialization**: Once the bootloader has loaded the operating system, the kernel (the core of the operating system) initializes and begins to load device drivers and other important system components.
+
+**System Initialization**: Once the kernel has loaded all the necessary drivers and system components, it hands control over to the init process, which is responsible for starting up all the other processes and services that the operating system needs to run.
+
+**User Login**: Once the system initialization process is complete, the computer is ready to be used. The user can log in to the system and begin using their applications and software.
+
+Throughout this process, the computer's hardware and software components work together to ensure that the system is started up correctly and that all the necessary resources are available for the user to perform their tasks. It is worth noting that the exact boot process can vary depending on the specific hardware and operating system being used, but the basic steps outlined above are common to most computer systems.
+
 - How do you handle interrupts in an embedded system?
 - What is your experience with firmware development for microcontrollers?
 - Have you ever worked with Real-time Operating Systems (RTOS)? If so, which ones and what was your experience?
